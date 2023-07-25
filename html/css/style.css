@@ -1,0 +1,86 @@
+/* ------------------------------- Cards slider */
+        
+img {
+    height: 280px;
+    
+}
+
+body {
+    background: hsl(0, 0, 94%);
+}
+
+.owl-nav {
+    margin-top: -100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    /* position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1; */
+}
+
+
+.owl-dots {
+    display: none;
+}
+.owl-stage{
+    /* margin-top: 100px; */
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+.owl-stage-outer{
+    margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------- Cards slider */
+        
+/* img {
+    height: 280px;
+    
+}
+
+body {
+    background: hsl(0, 0, 94%);
+}
+
+.owl-nav {
+    margin-top: -300px;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+.owl-dots {
+    display: none;
+}
+.owl-stage{
+    margin-top: 100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+} */
+/* .owl-stage-outer{
+    margin: 30px;
+} */

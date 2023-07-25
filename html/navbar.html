@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- second slider links Start -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+<!-- second slider links end-->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+
+
+
+    <style>
+   .test_carousel-inner,
+        .test_carousel-inner_2 {
+            padding: 1em;
+        }
+
+        .test_card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+        }
+
+        .test_carousel-control-prev,
+        .test_carousel-control-prev_2,
+        .test_carousel-control-next,
+        .test_carousel-control-next_2 {
+            background-color: #e1e1e1;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 768px) {
+            .test_carousel-item {
+                margin-right: 0;
+                flex: 0 0 33.333333%;
+                display: block;
+            }
+
+            .test_carousel-inner {
+                display: flex;
+            }
+            .test_carousel-inner_2 {
+                display: flex;
+            }
+        }
+
+        .test_card .img-wrapper {
+            max-width: 100%;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .test_card img {
+            max-height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .test_card .img-wrapper {
+                height: 17em;
+            }
+        }
+
+        .custom-car-icon {
+            font-size: 24px;
+            color: red;
+        }
+
+         .title-with-lines {
+          margin-bottom: 50px;
+          display: inline-block;
+        }
+      
+  .title-with-lines {
+        margin-bottom: 50px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .title-with-lines::after,
+    .title-with-lines::before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 2px;
+        border-bottom: 3px solid #000;
+        border-radius: 0%  40%  40% 0%;
+        position: absolute;
+        bottom: -11px;
+    }
+
+    .title-with-lines::before {
+        bottom: -19px;
+        width: 60%;
+        border-bottom: 2px solid #000;
+        border-radius: 0%  40%  40% 0%;
+        
+    }
+
+    .title-with-lines::nth-child(3)::after {
+        bottom: -10px;
+        width: 50%;
+    }
+    
+    .title-with-lines::nth-child(4)::after {
+        bottom: 200px;
+        /* height: 50px; */
+        width: 50%;
+    }
+/* ------------------------------- second slider */
+img {
+            height: 280px;
+        }
+
+        body {
+            background: hsl(0, 0, 94%);
+        }
+        .owl-nav{
+            margin-top: 100px;
+            font-size: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .owl-dots{
+            /* background-color: green; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="bi bi-car"></i>
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top " style="background-color: #000000c0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-size: 22px;font-family: Verdana, Geneva, Tahoma, sans-serif;" href="javascript:void(0)">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="javascript:void(0)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="javascript:void(0)">Used Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="javascript:void(0)">New Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="javascript:void(0)">Import Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="javascript:void(0)">About Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <button class="btn" style="color:white;background-color: #007bff" type="button">Login</button>
+                    <button class="btn" style="color:white;background-color: #f39c12;" type="button">Registration</button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </nav>
+    <div style="margin-top: 65px;margin-bottom: 6px;" >
+        <form action="">
+            <label class="visually-hidden" for="specificSizeInputGroupUsername">Search</label>
+            <div class="input-group">
+                <input class="form-control"  type="text" placeholder="Search">
+                <button class="btn" style="background-color: #a1a1a1; width: 70px;" type="button"> 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000; font-size: 20px;"></i> 
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+   
+
+    <section>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" style="height: 500px;" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" >
+                    <img src="image1.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Third slide label</h1>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image2.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Third slide label</h1>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image3.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Third slide label</h1>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image4.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Third slide label</h1>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- group of box after home slide start -->
+    <section class="mb-5">
+        <div class="container border-bottom" >
+
+
+            <div class="row row-cols-1 row-cols-md-2 my-4 g-4">
+                
+                
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            
+                            <i class="fa-solid fa-building" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            
+                            <i class="fa-solid fa-users" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            <i class="fa-solid fa-house-laptop" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            
+                            <i class="fa-solid fa-car-tunnel" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            
+                            <i class="fa-solid fa-car-on" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body g-4" style="display: flex;">
+                            <i class="fa-solid fa-car" style="font-size:65px;color: #e6e6e6;"></i>
+                            <div style="text-align:justify;margin: auto;">
+                                <h4> Awalible Cars</h4>
+                                <p class="card-text">This is a longer card with </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- group of box after home slide End -->
+
+<h1 class="m-5 fw-bold display-1 title-with-lines" style="">New <span class="text-danger">Cars</span></h1>
+<!-- -------------------------------------------------- -->
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <div class="mx-3">
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="mx-3">
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="mx-3">
+            <img src="image1.jpg" alt="">
+            <div style="text-align: center;">
+                <h1>Hello</h1>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="mx-3">
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div>
+            <img src="image1.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <!-- Projects Multi featured cars Slider End -->
+   
+    <h1 class="m-5 fw-bold display-1 title-with-lines" style="">Categorys of <span class="text-danger">Cars</span></h1>
+
+    <section>
+        <div class="container text-center mt-5">
+            <div class="row">
+                <div class="col">
+                    <i class="fa-solid fa-car" style="font-size:65px;color: #dbdada;"></i>
+                </div>
+                <div class="col">
+                    
+                    <i class="	fas fa-truck-monster" style="font-size:65px;color: #dbdada;"></i>
+                </div>
+                <div class="col">
+                    <i class="fas fa-truck-pickup" style="font-size:65px;color: #dbdada;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center my-5">
+            <div class="row">
+                <div class="col">
+                    <i class='fas fa-car-alt' style='font-size:48px;color:#dbdada;'></i>
+                    
+                </div>
+                <div class="col">
+                    <i class='fas fa-shuttle-van' style='font-size:48px;color:#dbdada;'></i>
+                </div>
+                <div class="col">
+                    <i class='	fas fa-truck' style='font-size:48px;color:#dbdada;'></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<!-- -------------------------------------------------- -->
+
+<!-- -------------------------------------------------- -->
+ <div class="container-fluid my-5">
+    <h1 class="m-5 fw-bold display-1 title-with-lines" style="">Featured <span class="text-danger">Cars</span></h1>
+
+        <div class="row px-5">
+            <div class="col-12 m-auto">
+                <div class="owl-carousel owl-theme">
+                    <div class="item mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="3.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="4.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="5.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="6.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="7.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="3.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="4.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="5.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="6.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="7.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------------------ -->
+
+
+
+
+    <!-- Footer Start  -->
+
+    <div class="container">
+        <hr>
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 offset-1">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter" />
+                            </svg>twitter</a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram" />
+                            </svg>Instagram</a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-square" viewBox="0 0 16 16">
+                        <path d="M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z"/>
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                      </svg></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Footer End  -->
+
+
+    
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+
+        var multipleCardCarousel = document.querySelector(
+            "#carouselExampleControls"
+        );
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                interval: false,
+            });
+            var carouselWidth = $(".test_carousel-inner")[0].scrollWidth;
+            var cardWidth = $(".test_carousel-item").width();
+            var scrollPosition = 0;
+            $("#carouselExampleControls .test_carousel-control-next").on("click", function () {
+                if (scrollPosition < carouselWidth - cardWidth * 4) {
+                    scrollPosition += cardWidth;
+                    $("#carouselExampleControls .test_carousel-inner").animate(
+                        { scrollLeft: scrollPosition },
+                        600
+                    );
+                }
+            });
+            $("#carouselExampleControls .test_carousel-control-prev").on("click", function () {
+                if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    $("#carouselExampleControls .test_carousel-inner").animate(
+                        { scrollLeft: scrollPosition },
+                        600
+                    );
+                }
+            });
+        } else {
+            $(multipleCardCarousel).addClass("slide");
+        }
+    </script>
+
+
+
+
+
+    <script>
+
+        var multipleCardCarousel = document.querySelector(
+            "#test_carouselExampleControls"
+        );
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                interval: false,
+            });
+            var carouselWidth = $(".test_carousel-inner_2")[0].scrollWidth;
+            var cardWidth = $(".test_carousel-item").width();
+            var scrollPosition = 0;
+            $("#test_carouselExampleControls .test_carousel-control-next_2").on("click", function () {
+                if (scrollPosition < carouselWidth - cardWidth * 4) {
+                    scrollPosition += cardWidth;
+                    $("#test_carouselExampleControls .test_carousel-inner_2").animate(
+                        { scrollLeft: scrollPosition },
+                        600
+                    );
+                }
+            });
+            $("#test_carouselExampleControls .test_carousel-control-prev").on("click", function () {
+                if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    $("#test_carouselExampleControls .test_carousel-inner_2").animate(
+                        { scrollLeft: scrollPosition },
+                        600
+                    );
+                }
+            });
+        } else {
+            $(multipleCardCarousel).addClass("slide");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Responsive Grid Layout</title>
+  <style>
+    .left-column {
+      background-color: #f8f9fa;
+    }
+
+    .right-column {
+      background-color: #e9ecef;
+    }
+
+    .col-lg-8 {
+      /* width: 65%; */
+    }
+
+    @media (max-width: 768px) {
+
+      .left-column,
+      .right-column {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      .col-lg-8 {
+        width: 65%;
+
+      }
+
+      .left-column,
+      .right-column {
+        /* width: 100%; */
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container col-12">
+    <div class="row" style="display: flex; justify-content: space-between;">
+      
+      <div class="col-lg-4 col-md-4 col-sm-6 left-column">
+        <!-- Left column content here -->
+        <h2>Left Column</h2>
+        <p>This is the left column content.</p>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6  right-column">
+        <!-- Right column content here -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <a href="image1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <img src="image1.jpg" class="img-fluid" alt="Image 1">
+              </a>
+            </div>
+            <!-- Add more image items as needed -->
+          </div>
+        </div>
+      </div>
+
+
+      <!-- second one  -->
+      <div class="col-lg-4 col-md-4 col-sm-12 ">
+        <!-- Left column content here -->
+        <!-- <h2>Left Column</h2>
+        <p>This is the left column content.</p> -->
+      </div>
+
+      <div class="right-column col-lg-8 col-md-6 col-sm-12  card">
+        <a href="image1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" style="text-decoration: none;color: black;">
+          <div class="row g-0">
+            
+            <div class="col-md-4 py-auto">
+
+              <img src="image1.jpg" class="img-fluid" alt="Image 1">
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.
+                  This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- second one  -->
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <!-- Left column content here -->
+        <!-- <h2>Left Column</h2>
+              <p>This is the left column content.</p> -->
+      </div>
+
+      <div class="right-column col-lg-8 col-md-8 col-sm-6  card">
+        <a href="image1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" style="text-decoration: none;color: black;">
+          <div class="row g-0">
+            <div class="col-md-4 py-2">
+              <img src="image1.jpg" class="img-fluid" alt="Image 1">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.
+                  This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- second one  -->
+      <div class="col-lg-4 col-md-4 col-sm-6">
+      </div>
+
+      <div class="right-column col-lg-8 col-md-8 col-sm-6  card">
+        <a href="image1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" style="text-decoration: none;color: black;">
+          <div class="row g-0">
+            
+            <div class="col-md-4 py-2">
+
+              <img src="image1.jpg" class="img-fluid" alt="Image 1">
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.
+                  This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid  my-2 ">
+    <div class="row">
+      <div class="col-sm-12 col-md-12  col-lg-4">
+        <div class="card" style="width: 100%;">
+          <img src="image1.jpg" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">This is the content of Card 1.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12  col-lg-8">
+        <div class="card" style="width: 100%;">
+          <img src="image1.jpg" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">This is the content of Card 1.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+
+  <!-- Child of Responsive Image Gallery -->
+  <div class="modal fade mx-5" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" style="width: 85%;">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content" style="height: 600px;width: 700px;">
+        <div class="modal-body" style="width: 700px;height: 600px;">
+          <img src="image1.jpg" class="img-fluid" style="width: 100%; height:100%;" alt="Modal Image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Child of Responsive Image Gallery end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var imageModal = document.getElementById('imageModal');
+    var imageLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+    imageLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var imageSrc = this.getAttribute('href');
+        var modalImage = imageModal.querySelector('img');
+        modalImage.src = imageSrc;
+        new bootstrap.Modal(imageModal).show();
+      });
+    });
+  </script>
+</body>
+
+</html>

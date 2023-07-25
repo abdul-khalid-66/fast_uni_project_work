@@ -1,0 +1,667 @@
+<!-- ... (existing code) ... -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+
+  <!-- second slider links end-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed" style="background-color: #000000c0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-size: 22px; font-family: Verdana, Geneva, Tahoma, sans-serif;"
+        href="javascript:void(0)">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+        aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto mx-5">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./used_cars.php">Used Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./new_cars.php">New Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="javascript:void(0)">Import Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="javascript:void(0)">About Us</a>
+          </li>
+        </ul>
+        <div class="d-flex gap-2">
+
+
+
+          <!-- Button to open the first modal -->
+          <button class="btn btn-primary" id="openModal1">Login</button>
+          <button class="btn" style="color: white; background-color: #f39c12;" type="button">Registration</button>
+
+          <!-- ... (existing code) ... -->
+
+          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Show a second modal and hide this one with the button below.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open
+                    second
+                    modal</button>
+                  <!-- Close the first modal -->
+                  <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+                    first</button>
+                  <!-- Close the second modal -->
+                  <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ... (existing code) ... -->
+
+          <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button> -->
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second
+            modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+            first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade mx-5" id="imagModel0" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true"
+    style="width: 85%;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="height: 600px;width: 700px;">
+        <div class="modal-body" style="width: 700px;height: 600px;">
+          This is the trouble div <BR>This is the trouble div <BR>This is the trouble div <BR>
+          <img src="image1.jpg" class="img-fluid" style="width: 100%; height:100%;" alt="Modal Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div style="margin-top: 6px;margin-bottom: 6px;">
+    <form action="">
+      <label class="visually-hidden" for="specificSizeInputGroupUsername">Search</label>
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn" style="background-color: #a1a1a1; width: 70px;" type="button">
+          <i class="fa-solid fa-magnifying-glass" style="color: #000000; font-size: 20px;"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
+
+
+
+  <!-- Child of Responsive Image Gallery end -->
+
+  <script>
+    function loadCards(page) {
+      // Send an AJAX request to fetch the cards for the given page
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'used_cars_get_cards.php?page=' + page, true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // Update the card container with the fetched cards
+          document.getElementById('card-container').innerHTML = xhr.responseText;
+          // Update the active class for the pagination link
+          var paginationContainer = document.getElementById('pagination-container');
+          var paginationLinks = paginationContainer.getElementsByTagName('a');
+          for (var i = 0; i < paginationLinks.length; i++) {
+            paginationLinks[i].classList.remove('active');
+          }
+          paginationLinks[page - 1].classList.add('active');
+        }
+      };
+      xhr.send();
+    }
+  </script>
+
+
+  <script>
+    var imageModal = document.getElementById('imageModal');
+    var imageLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+    imageLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var imageSrc = this.getAttribute('href');
+        var modalImage = imageModal.querySelector('img');
+        modalImage.src = imageSrc;
+        new bootstrap.Modal(imageModal).show();
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+
+
+
+  <script>
+
+    var multipleCardCarousel = document.querySelector(
+      "#carouselExampleControls"
+    );
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        interval: false,
+      });
+      var carouselWidth = $(".test_carousel-inner")[0].scrollWidth;
+      var cardWidth = $(".test_carousel-item").width();
+      var scrollPosition = 0;
+      $("#carouselExampleControls .test_carousel-control-next").on("click", function () {
+        if (scrollPosition < carouselWidth - cardWidth * 4) {
+          scrollPosition += cardWidth;
+          $("#carouselExampleControls .test_carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+          );
+        }
+      });
+      $("#carouselExampleControls .test_carousel-control-prev").on("click", function () {
+        if (scrollPosition > 0) {
+          scrollPosition -= cardWidth;
+          $("#carouselExampleControls .test_carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+          );
+        }
+      });
+    } else {
+      $(multipleCardCarousel).addClass("slide");
+    }
+  </script>
+
+
+
+
+
+
+  
+<!-- login button java script  -->
+<script>
+  // Open the first modal with JavaScript
+  document.getElementById('openModal1').addEventListener('click', function () {
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
+    myModal.show();
+  });
+
+  // Close the second modal when the first modal is hidden
+  $('#exampleModalToggle').on('hidden.bs.modal', function () {
+    $('#exampleModalToggle2').modal('hide');
+  });
+
+  // Close the first modal when the second modal is hidden
+  $('#exampleModalToggle2').on('hidden.bs.modal', function () {
+    $('#exampleModalToggle').modal('hide');
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ... (existing code) ... -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+
+  <!-- second slider links end-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+<style>
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- 
+<div class="modal-dialog modal-xl">...</div>
+<div class="modal-dialog modal-lg">...</div>
+<div class="modal-dialog modal-sm">...</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Registration Form</h5>
+        <!-- <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"></h3> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- <div class="modal-body"> -->
+
+
+
+
+
+        <!-- <div class="card shadow-2-strong card-registration" style="border-radius: 15px;"> -->
+                <div class="card-body p-4 p-md-5">
+                  
+                  <form>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstName">First Name</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Last Name</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                        <div class="form-outline datepicker w-100">
+                          <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                          <label for="birthdayDate" class="form-label">Birthday</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <h6 class="mb-2 pb-1">Gender: </h6>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                          <label class="form-label" for="emailAddress">Email</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+
+                        <select class="select form-control-lg">
+                          <option value="1" disabled>Choose option</option>
+                          <option value="2">Subject 1</option>
+                          <option value="3">Subject 2</option>
+                          <option value="4">Subject 3</option>
+                        </select>
+                        <label class="form-label select-label">Choose option</label>
+
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                      <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                    </div>
+
+                  </form>
+                </div>
+              <!-- </div> -->
+
+
+
+
+      <!-- </div> -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+          <!-- retistration form start  -->
+
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Launch static backdrop modal
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  <form>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstName">First Name</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <div class="form-outline">
+                          <input type="text" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Last Name</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                        <div class="form-outline datepicker w-100">
+                          <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                          <label for="birthdayDate" class="form-label">Birthday</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4">
+
+                        <h6 class="mb-2 pb-1">Gender: </h6>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                          <label class="form-label" for="emailAddress">Email</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+
+                        <select class="select form-control-lg">
+                          <option value="1" disabled>Choose option</option>
+                          <option value="2">Subject 1</option>
+                          <option value="3">Subject 2</option>
+                          <option value="4">Subject 3</option>
+                        </select>
+                        <label class="form-label select-label">Choose option</label>
+
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                      <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- retistration form end  -->
